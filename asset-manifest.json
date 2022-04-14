@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/personal-portfolio/static/css/main.14864113.chunk.css",
-    "main.js": "/personal-portfolio/static/js/main.70402882.chunk.js",
-    "main.js.map": "/personal-portfolio/static/js/main.70402882.chunk.js.map",
-    "runtime-main.js": "/personal-portfolio/static/js/runtime-main.006345c4.js",
-    "runtime-main.js.map": "/personal-portfolio/static/js/runtime-main.006345c4.js.map",
-    "static/js/2.400fd454.chunk.js": "/personal-portfolio/static/js/2.400fd454.chunk.js",
-    "static/js/2.400fd454.chunk.js.map": "/personal-portfolio/static/js/2.400fd454.chunk.js.map",
-    "static/js/3.99fae45e.chunk.js": "/personal-portfolio/static/js/3.99fae45e.chunk.js",
-    "static/js/3.99fae45e.chunk.js.map": "/personal-portfolio/static/js/3.99fae45e.chunk.js.map",
+    "main.css": "/personal-portfolio/static/css/main.06cf3ece.chunk.css",
+    "main.js": "/personal-portfolio/static/js/main.f73f34c9.chunk.js",
+    "main.js.map": "/personal-portfolio/static/js/main.f73f34c9.chunk.js.map",
+    "runtime-main.js": "/personal-portfolio/static/js/runtime-main.6dff30a6.js",
+    "runtime-main.js.map": "/personal-portfolio/static/js/runtime-main.6dff30a6.js.map",
+    "static/js/2.37e62f3d.chunk.js": "/personal-portfolio/static/js/2.37e62f3d.chunk.js",
+    "static/js/2.37e62f3d.chunk.js.map": "/personal-portfolio/static/js/2.37e62f3d.chunk.js.map",
     "index.html": "/personal-portfolio/index.html",
-    "static/css/main.14864113.chunk.css.map": "/personal-portfolio/static/css/main.14864113.chunk.css.map",
-    "static/js/2.400fd454.chunk.js.LICENSE.txt": "/personal-portfolio/static/js/2.400fd454.chunk.js.LICENSE.txt"
+    "static/css/main.06cf3ece.chunk.css.map": "/personal-portfolio/static/css/main.06cf3ece.chunk.css.map",
+    "static/js/2.37e62f3d.chunk.js.LICENSE.txt": "/personal-portfolio/static/js/2.37e62f3d.chunk.js.LICENSE.txt",
+    "static/media/texturemap1024.83745453.png": "/personal-portfolio/static/media/texturemap1024.83745453.png",
+    "static/media/uluru-heightmap.4e40045d.png": "/personal-portfolio/static/media/uluru-heightmap.4e40045d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.006345c4.js",
-    "static/js/2.400fd454.chunk.js",
-    "static/css/main.14864113.chunk.css",
-    "static/js/main.70402882.chunk.js"
+    "static/js/runtime-main.6dff30a6.js",
+    "static/js/2.37e62f3d.chunk.js",
+    "static/css/main.06cf3ece.chunk.css",
+    "static/js/main.f73f34c9.chunk.js"
   ]
 }
