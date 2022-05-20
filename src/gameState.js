@@ -8,7 +8,6 @@ export const tankPositionState = atom({
 export const enemyPositionState = atom({
   key: "enemyPosition", // unique ID (with respect to other atoms/selectors)
   default: [
-    { x: -40, y: -3, z: -30, text: "Try to click (shoot) on each enemy! GO" },
     { x: -20, y: -2, z: -70, text: "ABOUT ME" },
     { x: 5, y: .6, z: -90, text: "EXPERIENCES" },
     { x: -4, y: 10, z: -120, text: "CONTACT ME" }
