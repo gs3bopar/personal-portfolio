@@ -42,27 +42,42 @@ const Modal = ({ enemiesHit, setEnemiesHit }) => {
       enemiesHit && enemiesHit[EXPERIENCES.STRING] &&
         <>
         <div className='sameLineFlex'>
-          <h2>{EXPERIENCES.TD_SECURITIES}</h2>
+          <h2 className='company-logos'>
+              <div className="td-securities"></div>
+              {EXPERIENCES.TD_SECURITIES}
+          </h2>
           <h3>{EXPERIENCES.TD_SECURITIES_OCCUPATION}</h3>
         </div>
 
         <div className='sameLineFlex'>
-          <h2>{EXPERIENCES.RYERSON_UNIVERSITY}</h2>
+          <h2 className='company-logos'>
+            <div className="tmu"></div>
+            {EXPERIENCES.RYERSON_UNIVERSITY}
+          </h2>  
           <h3>{EXPERIENCES.RYERSON_UNIVERSITY_OCCUPATION}</h3>
         </div>
 
         <div className='sameLineFlex'>
-          <h2>{EXPERIENCES.LIFION_BY_ADP}</h2>
+          <h2 className='company-logos'>
+            <div className="lifion-by-adp"></div>
+            {EXPERIENCES.LIFION_BY_ADP}
+          </h2>
           <h3>{EXPERIENCES.LIFION_BY_ADP_OCCUPATION}</h3>
         </div>
 
         <div className='sameLineFlex'>
-          <h2>{EXPERIENCES.STRATUS_360_INC}</h2>
+          <h2 className='company-logos'>
+            <div className="stratus-360"></div>
+            {EXPERIENCES.STRATUS_360_INC}
+          </h2>
           <h3>{EXPERIENCES.STRATUS_360_INC_OCCUPATION}</h3>
         </div>
 
         <div className='sameLineFlex'>
-          <h2>{EXPERIENCES.IBI_GROUP}</h2>
+          <h2 className='company-logos'>
+            <div className="ibi-group"></div>
+            {EXPERIENCES.IBI_GROUP}
+          </h2>
           <h3>{EXPERIENCES.IBI_GROUP_OCCUPATION}</h3>
         </div>
 
@@ -72,25 +87,16 @@ const Modal = ({ enemiesHit, setEnemiesHit }) => {
       {
       enemiesHit && enemiesHit[CONTACT_ME.STRING] &&
         <>
-          <div className='sameLineFlex'>
-            <a href={CONTACT_ME.EMAIL_LINK} target="_blank" rel="noreferrer">
-              <h2>📧</h2>
-            </a>
-            <h3>{CONTACT_ME.EMAIL_LINK}</h3>   
-          </div>
-
-          <div className='sameLineFlex'>
+          <div className='contact-Info'>
             <a href={CONTACT_ME.LINKEDIN_LINK} target="_blank" rel="noreferrer">
-              <h2>👨‍💻</h2>
+              <div className="linkedin"></div>
             </a>
-            <h3>{CONTACT_ME.LINKEDIN_LINK}</h3>
-          </div>
-
-          <div className='sameLineFlex'>
             <a href={CONTACT_ME.GITHUB_LINK} target="_blank" rel="noreferrer">
-              <h2>🏹</h2>
+              <div className="github"></div>
             </a>
-            <h3>{CONTACT_ME.GITHUB_LINK}</h3>
+            <a href={CONTACT_ME.EMAIL_LINK} target="_blank" rel="noreferrer">
+              <div className="email"></div>
+            </a>
           </div>
         </>
       }

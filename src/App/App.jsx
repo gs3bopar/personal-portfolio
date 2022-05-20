@@ -70,7 +70,6 @@ function Model(props) {
   // Material.003 gun center parts
   // Material.002
   useEffect(() => {
-    console.log(fbx);
     fbx.traverse(child => {
       if (child.isMesh) {
         child.material = new THREE.MeshLambertMaterial({ color: '#32FFB8'});
