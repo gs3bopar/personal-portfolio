@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/personal-portfolio/static/css/main.06cf3ece.chunk.css",
-    "main.js": "/personal-portfolio/static/js/main.f73f34c9.chunk.js",
-    "main.js.map": "/personal-portfolio/static/js/main.f73f34c9.chunk.js.map",
-    "runtime-main.js": "/personal-portfolio/static/js/runtime-main.6dff30a6.js",
-    "runtime-main.js.map": "/personal-portfolio/static/js/runtime-main.6dff30a6.js.map",
-    "static/js/2.37e62f3d.chunk.js": "/personal-portfolio/static/js/2.37e62f3d.chunk.js",
-    "static/js/2.37e62f3d.chunk.js.map": "/personal-portfolio/static/js/2.37e62f3d.chunk.js.map",
-    "index.html": "/personal-portfolio/index.html",
-    "static/css/main.06cf3ece.chunk.css.map": "/personal-portfolio/static/css/main.06cf3ece.chunk.css.map",
-    "static/js/2.37e62f3d.chunk.js.LICENSE.txt": "/personal-portfolio/static/js/2.37e62f3d.chunk.js.LICENSE.txt",
-    "static/media/texturemap1024.83745453.png": "/personal-portfolio/static/media/texturemap1024.83745453.png",
-    "static/media/uluru-heightmap.4e40045d.png": "/personal-portfolio/static/media/uluru-heightmap.4e40045d.png"
+    "main.css": "/portfolio/static/css/main.d8e0c141.chunk.css",
+    "main.js": "/portfolio/static/js/main.d8108f0e.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.d8108f0e.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.c5d194a8.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.c5d194a8.js.map",
+    "static/js/2.84ac55a0.chunk.js": "/portfolio/static/js/2.84ac55a0.chunk.js",
+    "static/js/2.84ac55a0.chunk.js.map": "/portfolio/static/js/2.84ac55a0.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/main.d8e0c141.chunk.css.map": "/portfolio/static/css/main.d8e0c141.chunk.css.map",
+    "static/js/2.84ac55a0.chunk.js.LICENSE.txt": "/portfolio/static/js/2.84ac55a0.chunk.js.LICENSE.txt",
+    "static/media/heightMap.dc15f021.png": "/portfolio/static/media/heightMap.dc15f021.png",
+    "static/media/skyWithSun.5f0c1def.jpg": "/portfolio/static/media/skyWithSun.5f0c1def.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6dff30a6.js",
-    "static/js/2.37e62f3d.chunk.js",
-    "static/css/main.06cf3ece.chunk.css",
-    "static/js/main.f73f34c9.chunk.js"
+    "static/js/runtime-main.c5d194a8.js",
+    "static/js/2.84ac55a0.chunk.js",
+    "static/css/main.d8e0c141.chunk.css",
+    "static/js/main.d8108f0e.chunk.js"
   ]
 }
