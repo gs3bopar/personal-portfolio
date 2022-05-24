@@ -1,7 +1,6 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Suspense, useEffect, useRef, useMemo, useState } from 'react';
 import { 
-  OrbitControls,
   useFBX,
   useTexture,
 } from "@react-three/drei";
@@ -20,7 +19,6 @@ import skyRoadHeightMap from '../static/materials/heightMap.png'
 import Modal from './Modal/Modal';
 import { EXPERIENCES, ABOUT_ME, CONTACT_ME } from '../constants';
 import { getRandomNum, landsOnRectangle } from "../utils";
-import "./App.css";
 
 const LASER_RANGE = 100;
 const LASER_Z_VELOCITY = 1;
@@ -229,11 +227,8 @@ function Terrain(props) {
   const terrainRef = useRef();
 
   useFrame(() => {
-    if (terrainRef.current.position.z > 350) {
-      terrainRef.current.position.z = -512;
-    } else {
-      terrainRef.current.position.z += props.GAME_SPEED;
-    }
+    if (terrainRef.current.position.z > 350) terrainRef.current.position.z = -512;
+    else terrainRef.current.position.z += props.GAME_SPEED;
   });
 
   // this terrain is reversed on x y and z axis
@@ -248,7 +243,6 @@ function Terrain(props) {
       >
         <planeBufferGeometry receiveShadow args={[1024, 1024, 256, 256]} />
         <shaderMaterial
-        // ref={mat}
         receiveShadow
           fog
           uniforms={{
@@ -323,15 +317,6 @@ const TargetText = ({text}) => {
     (<mesh>
       <textGeometry args={[text, textOptions]} />
       <meshBasicMaterial color={'#A7E82E'} />
-      {/* <meshPhongMaterial
-        color='0x0095DD'
-        emissive={'orange'}
-        roughness={1}
-        metalness={0}
-        wireframe
-        flatShading
-        vertexColors
-      /> */}
     </mesh>)
   , [text]);
 
@@ -345,7 +330,6 @@ function Enemies() {
     enemies.map((enemy) => (
       <group
         position={[enemy.x, enemy.y, enemy.z]}
-        // key={Math.random()}
       >
         <TargetText text={enemy.text} key={enemy.text}/>
       </group>
@@ -353,24 +337,8 @@ function Enemies() {
   )
 }
 
-// Manages Drawing enemies that currently exist in state
-// function Enemies() {
-//   const enemies = useRecoilValue(enemyPositionState);
-//   return (
-//     <group>
-//       {enemies.map((enemy) => (
-//         <mesh position={[enemy.x, enemy.y, enemy.z]} key={`${enemy.x}`}>
-//           <sphereBufferGeometry attach="geometry" args={[2, 8, 8]} />
-//           <meshStandardMaterial attach="material" color="white" wireframe />
-//         </mesh>
-//       ))}
-//     </group>
-//   );
-// }
-
 function Lasers() {
   const lasers = useRecoilValue(laserPositionState);
-
 
   return (
     <group receiveShadow={false}>
@@ -467,25 +435,25 @@ function GameTimer({ setEnemiesHit }) {
 }
 
 
-function Lights() {
-  const [ref, seRef] = useState()
-  return (
-    <>
-      <directionalLight
-        ref={seRef}
-        intensity={50}
-        position={[5, 5, 5]}
-        // rotation={[0,0,Math.PI]}
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
-        shadow-camera-near={0.5}
-        shadow-camera-far={500}
-        castShadow={true}
-      />
-      {ref && <directionalLightHelper args={[ref, 5]} />}
-    </>
-  )
-}
+// function Lights() {
+//   const [ref, seRef] = useState()
+//   return (
+//     <>
+//       <directionalLight
+//         ref={seRef}
+//         intensity={50}
+//         position={[5, 5, 5]}
+//         // rotation={[0,0,Math.PI]}
+//         shadow-mapSize-width={2048}
+//         shadow-mapSize-height={2048}
+//         shadow-camera-near={0.5}
+//         shadow-camera-far={500}
+//         castShadow={true}
+//       />
+//       {ref && <directionalLightHelper args={[ref, 5]} />}
+//     </>
+//   )
+// }
 
 function DisplayScore() {
   const [score, setScore] = useRecoilState(scoreState);
@@ -555,7 +523,7 @@ const App = () => {
         setEnemiesHit={setEnemiesHit}
       />
       <DisplayScore />
-        {/* <OrbitControls /> */}
+      {/* <OrbitControls /> */}
     </RecoilRoot>
   </Canvas>
     {
