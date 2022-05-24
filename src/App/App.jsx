@@ -1,4 +1,4 @@
-import { useLoader, Canvas, useFrame, useThree } from '@react-three/fiber'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Suspense, useEffect, useRef, useMemo, useState } from 'react';
 import { 
   OrbitControls,
@@ -263,7 +263,6 @@ function Terrain(props) {
             //   ambientLight
             // }
           }}
-          // map-
           // Feed the shaders as strings
           vertexShader={vertexShader}
           fragmentShader={fragmentShader}
@@ -320,22 +319,6 @@ const Target = (props) => {
 // }
 
 const TargetText = ({text}) => {
-    // return (
-  // (<group>
-    /* <mesh>
-      <lineSegments>
-        <wireframeGeometry>
-          <sphereGeometry args={[100,100,100]} />
-        </wireframeGeometry>
-        <lineBasicMaterial color={'0xffffff'} linewidth={2} />
-      </lineSegments>
-    </mesh> */
-    /* <mesh>
-      <sphereGeometry args={[25, 25]}/>
-      <meshBasicMaterial color={'#cdf9ff'} shading={THREE.FlatShading}/>
-    </mesh> */
-  // <group>
-
   const targetText = useMemo(() => 
     (<mesh>
       <textGeometry args={[text, textOptions]} />
@@ -435,7 +418,7 @@ function LaserController() {
 function GameTimer({ setEnemiesHit }) {
   const [enemies, setEnemies] = useRecoilState(enemyPositionState);
   const [lasers, setLaserPositions] = useRecoilState(laserPositionState);
-  // const [score, setScore] = useRecoilState(scoreState);
+  const [score, setScore] = useRecoilState(scoreState);
 
   useFrame(({ mouse }) => {
 
@@ -443,10 +426,12 @@ function GameTimer({ setEnemiesHit }) {
     enemies.forEach((enemy) => {
       hitEnemies[enemy.text] = lasers.filter(() => lasers.filter((laser) => landsOnRectangle(laser, enemy) === true).length > 0).length > 0;
     });
-    // console.log(hitEnemies);
-    // setScore(score + 1);
+
     // for modal
-    if (Object.values(hitEnemies).includes(true)) setEnemiesHit(hitEnemies);
+    if (Object.values(hitEnemies).includes(true)) {
+      setEnemiesHit(hitEnemies);
+      setScore(score + 1);
+    }
 
     // Move all of the enemies. Remove enemies that have been destroyed, or passed the player.
     // const enemiesArr = ["ABOUT ME", "EXPERIENCES"];
@@ -502,6 +487,24 @@ function Lights() {
   )
 }
 
+function DisplayScore() {
+  const [score, setScore] = useRecoilState(scoreState);
+  return (
+    <group position={[-.32,-3.17,1]}>
+      <mesh>
+        <textGeometry args={[String(score),
+        {
+          font: font,
+		      size: 2,
+		      height: .09
+        }
+      ]} />
+        <meshBasicMaterial color={'#428bff'} />
+      </mesh>
+    </group>
+  );
+}
+
 const App = () => {
   const ref = useRef();
   const [speed, setSpeed] = useState(0.06);
@@ -510,14 +513,6 @@ const App = () => {
     [EXPERIENCES.STRING]: false,
     [CONTACT_ME.STRING]: false
   });
-
-  // const showModal = () => {
-  //   this.setState({ show: true });
-  // };
-
-  // const hideModal = () => {
-  //   setAboutMeHit(false);
-  // };
 
   useEffect(() => {
     if (Object.values(enemiesHit).includes(true)) setSpeed(0.02);
@@ -559,12 +554,11 @@ const App = () => {
       <GameTimer 
         setEnemiesHit={setEnemiesHit}
       />
+      <DisplayScore />
         {/* <OrbitControls /> */}
     </RecoilRoot>
   </Canvas>
-
     {
-      // Object.values(enemiesHit).includes(true) &&
         <Modal enemiesHit={enemiesHit} setEnemiesHit={setEnemiesHit}></Modal>
     }
     </>

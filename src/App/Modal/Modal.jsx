@@ -1,11 +1,9 @@
-import { useEffect } from 'react';
 import { EXPERIENCES, ABOUT_ME, CONTACT_ME, MODAL } from '../../constants';
 import "./Modal.css";
 
 
 const Modal = ({ enemiesHit, setEnemiesHit }) => {
   const showHideClassName = Object.values(enemiesHit).includes(true) ? "modal display-block" : "modal display-none";
-  // const showHideClassName = "modal display-block";
 
   const closeAllModals = (e) => {
     e.preventDefault();
