@@ -16,16 +16,23 @@ const Modal = ({ enemiesHit, setEnemiesHit }) => {
     );
   }
 
-  // useEffect(() => {
-  //   // more than one true, choose first one to be true else all false
-  //   for (const [key, value] in Object.entries(enemiesHit)) {
-  //   }
-  // }, []);
+  function renderDefaultMessage() {
+    if (!enemiesHit[ABOUT_ME.STRING] && !enemiesHit[EXPERIENCES.STRING] && !enemiesHit[CONTACT_ME.STRING]) {
+      return (
+        <h3>Well Done! After clicking close you will see more information to learn more about me.</h3>
+      )
+    } else {
+      return (null);
+    }
+  }
 
   return (
     <div className={showHideClassName}>
 
       <section className="modal-main">
+
+      {renderDefaultMessage()}
+
       {
       enemiesHit && enemiesHit[ABOUT_ME.STRING] &&
         <>
