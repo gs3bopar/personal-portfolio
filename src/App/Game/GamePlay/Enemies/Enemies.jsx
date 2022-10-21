@@ -6,7 +6,7 @@ import {
 } from "../../../../gameState";
 
 const TargetText = ({text}) => {
-  const targetText = useMemo(() => 
+  const targetText = useMemo(() =>
     (<mesh>
       <GameOverRegular text={text} size={8} height={.09} />
       <meshBasicMaterial color={'#A7E82E'} />
