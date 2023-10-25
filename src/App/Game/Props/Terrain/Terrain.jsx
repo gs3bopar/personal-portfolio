@@ -20,7 +20,7 @@ const Particles = () => {
     }
 
     return [positions, sizes];
-  });
+  }, []);
 
   useFrame(() => {
     parRef.current.position.z -= .0001;

@@ -6,7 +6,7 @@ import { EXPERIENCES, ABOUT_ME, CONTACT_ME } from '../constants';
 import Terrain from "./Game/Props/Terrain/Terrain";
 import TankModel from "./Game/Props/TankModel/TankModel";
 import GamePlay from "./Game/GamePlay/GamePlay";
-// import { OrbitControls } from "@react-three/drei";
+// import { OrbitControls, Stars } from "@react-three/drei";
 
 const App = () => {
   const ref = useRef();
@@ -25,7 +25,7 @@ const App = () => {
   return (
     <>
     <Canvas
-      style={{ background: "#cdf9ff" }}
+      style={{ background: "#000" }}
       camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 2, 5] }}
       dpr={Math.max(window.devicePixelRatio, 2)}
       ref={ref}
@@ -45,7 +45,7 @@ const App = () => {
     </RecoilRoot>
   </Canvas>
     {
-        <Modal enemiesHit={enemiesHit} setEnemiesHit={setEnemiesHit}></Modal>
+      <Modal enemiesHit={enemiesHit} setEnemiesHit={setEnemiesHit}></Modal>
     }
     </>
   )
